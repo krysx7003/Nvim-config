@@ -1,0 +1,7 @@
+-- NEAR FUTURE
+-- Yeet on git
+-- Recolor the living shit out of the color sheme nappingfox.lua
+-- NOT SO IMPORTANT
+-- Add support for c++
+-- Add support for java??(only if needed for kotlin)
+-- Add support for kotlin
