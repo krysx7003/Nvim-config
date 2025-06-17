@@ -2,6 +2,21 @@ local lspconfig = require("lspconfig")
 
 lspconfig.basedpyright.setup({
   filetypes = {"python"},
+  settings = {
+      basedpyright = {
+          analysis = {
+              diagnosticSeverityOverrides = {
+                  reportUnusedCallResult = "none",
+                  reportAny = "none",
+                  reportMissingDocstring = "none",
+                  reportUnknownArgumentType = "none" ,
+                  reportUnknownLambdaType = "none",
+                  reportUnknownMemberType = "none",
+                  reportUnknownVariableType = "none",
+              },
+            }
+        }
+  },
   on_attach = function (client,bufnr)
       client.server_capabilities.semanticTokensProvider = {
             full = true,

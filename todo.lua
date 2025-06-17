@@ -1,6 +1,7 @@
 -- NEAR FUTURE
 -- Recolor the living shit out of the color sheme nappingfox.lua
+-- Add support for Latex (lsp + real time preview in browser)
 -- NOT SO IMPORTANT
 -- Add support for c++
 -- Add support for java??(only if needed for kotlin)
--- Add support for kotlincopes has been 
+-- Add support for kotlin
