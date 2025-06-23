@@ -1,7 +1,9 @@
 -- NEAR FUTURE
 -- Recolor the living shit out of the color sheme nappingfox.lua
 -- Add support for Latex (lsp + real time preview in browser)
+-- Upgrade javelin (server starts on nvim load and opening image buffer only sends the correct html)
+-- Create chronos (Simple timer on bar) 
 -- NOT SO IMPORTANT
--- Add support for c++
+-- Add support for c++ (lsp,linter, dap and cmake)
+-- Add support for kotlin (lsp,linter and dap)
 -- Add support for java??(only if needed for kotlin)
--- Add support for kotlin
