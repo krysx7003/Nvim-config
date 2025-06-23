@@ -1,6 +1,5 @@
 require("config.lazy")
 require("config.remap")
-require("config.images").setup()
 
 vim.opt.tabstop = 4
 
