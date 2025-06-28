@@ -1,24 +1,24 @@
 local lspconfig = require("lspconfig")
 
 lspconfig.basedpyright.setup({
-  filetypes = {"python"},
-  settings = {
-      basedpyright = {
-          analysis = {
-              diagnosticSeverityOverrides = {
-                  reportUnusedCallResult = "none",
-                  reportAny = "none",
-                  reportMissingDocstring = "none",
-                  reportUnknownArgumentType = "none" ,
-                  reportUnknownLambdaType = "none",
-                  reportUnknownMemberType = "none",
-                  reportUnknownVariableType = "none",
-              },
+    filetypes = { "python" },
+    settings = {
+        basedpyright = {
+            analysis = {
+                diagnosticSeverityOverrides = {
+                    reportUnusedCallResult = "none",
+                    reportAny = "none",
+                    reportMissingDocstring = "none",
+                    reportUnknownArgumentType = "none",
+                    reportUnknownLambdaType = "none",
+                    reportUnknownMemberType = "none",
+                    reportUnknownVariableType = "none",
+                },
             }
         }
-  },
-  on_attach = function (client,bufnr)
-      client.server_capabilities.semanticTokensProvider = {
+    },
+    on_attach = function(client, bufnr)
+        client.server_capabilities.semanticTokensProvider = {
             full = true,
             legend = {
                 tokenTypes = {
@@ -35,16 +35,16 @@ lspconfig.basedpyright.setup({
                 }
             },
             range = true,
-      }
-      vim.api.nvim_create_autocmd({'BufEnter', 'BufWritePost'}, {
-          buffer = bufnr,
-          callback = function()
-              vim.lsp.semantic_tokens.force_refresh()
-          end
-     })
-  end
+        }
+        vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWritePost' }, {
+            buffer = bufnr,
+            callback = function()
+                vim.lsp.semantic_tokens.force_refresh()
+            end
+        })
+    end
 })
 
 lspconfig.ruff.setup({
-  filetypes = {"python"},
+    filetypes = { "python" },
 })

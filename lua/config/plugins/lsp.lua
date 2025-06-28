@@ -1,4 +1,4 @@
-return{
+return {
     {
         "neovim/nvim-lspconfig",
         dependencies = {
@@ -18,9 +18,12 @@ return{
         },
         config = function()
             require("lspconfig").lua_ls.setup({
-                filetypes = {"lua"},
+                filetypes = { "lua" },
             })
             require("config.plugins.lsp.python")
+            require("lspconfig").clangd.setup({
+                filetypes = { "cpp" }
+            })
 
             vim.diagnostic.config({
                 virtual_text = true,
@@ -59,13 +62,13 @@ return{
                     end, { "i", "s" }),
                 }
             })
-        cmp.setup.filetype({"sql"},{
+            cmp.setup.filetype({ "sql" }, {
                 sources = {
-                    {name = "vim-dadbod-completion"},
-                    {name = "buffer"}
+                    { name = "vim-dadbod-completion" },
+                    { name = "buffer" }
                 }
             }
-        )
+            )
         end,
     }
 }

@@ -24,10 +24,9 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 require("lazy").setup({
     spec = {
-        { "EdenEast/nightfox.nvim",  config = function() vim.cmd.colorscheme "carbonfox" end },
+        { "EdenEast/nightfox.nvim",      config = function() vim.cmd.colorscheme "carbonfox" end },
         { 'nvim-tree/nvim-web-devicons', opt = {} },
         { import = "config.plugins" },
-        { import = "config.plugins.python" },
     },
     change_detection = {
         -- automatically check for config file changes and reload the ui
