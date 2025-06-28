@@ -1,6 +1,5 @@
 -- NEAR FUTURE
 -- Recolor the living shit out of the color sheme nappingfox.lua
--- Upgrade javelin (server starts on nvim load and opening image buffer only sends the correct html)
 -- After compiling the latex file open the jpg with javelin
 -- create .vim dir put the (format files there)
 -- NOT SO IMPORTANT
