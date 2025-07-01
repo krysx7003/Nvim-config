@@ -1,8 +1,8 @@
-return{
-    {
-        dir = vim.fn.expand("~/plugins/javelin.nvim"),
-        config = function ()
-            require('javelin').setup()
-        end
-    }
+return {
+	{
+		"krysx7003/javelin.nvim",
+		config = function()
+			require("javelin").setup()
+		end,
+	},
 }
