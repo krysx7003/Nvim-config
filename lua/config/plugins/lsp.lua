@@ -4,11 +4,9 @@ return {
         dependencies = {
             {
                 "folke/lazydev.nvim",
-                ft = "lua", -- only load on lua files
+                ft = "lua",
                 opts = {
                     library = {
-                        -- See the configuration section for more details
-                        -- Load luvit types when the `vim.uv` word is found
                         { path = "${3rd}/luv/library", words = { "vim%.uv" } },
                     },
                 },
@@ -42,24 +40,23 @@ return {
                 mapping = {
                     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
                     ['<C-f>'] = cmp.mapping.scroll_docs(4),
-                    ["<C-Space>"] = cmp.mapping.complete(),
-                    ["<CR>"] = cmp.mapping.confirm({ select = true }),
-
-                    ["<Tab>"] = cmp.mapping(function(fallback)
+                    ['<C-Space>'] = cmp.mapping.complete(),
+                    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+                    ['<Tab>'] = cmp.mapping(function(fallback)
                         if cmp.visible() then
                             cmp.select_next_item()
                         else
                             fallback()
                         end
                     end, { "i", "s" }),
-
-                    ["<S-Tab>"] = cmp.mapping(function(fallback)
+                    ['<S-Tab>'] = cmp.mapping(function(fallback)
                         if cmp.visible() then
                             cmp.select_prev_item()
                         else
                             fallback()
                         end
                     end, { "i", "s" }),
+
                 }
             })
             cmp.setup.filetype({ "sql" }, {
