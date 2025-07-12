@@ -32,6 +32,7 @@ vim.api.nvim_create_user_command("CmakeCreate", function()
         "-DCMAKE_CXX_COMPILER=clang++",
     })
     print("CMake debug and release build directories created")
+    vim.fn.system({ "mv", vim.fn.expand("~/.config/nvim/.nvim/.clang-format"), vim.fn.expand("~/.nvim/") })
     require("oil").refresh()
 end, {})
 
@@ -41,5 +42,6 @@ vim.api.nvim_create_user_command("CmakeBuild", function()
 
     print("Debug build output:\n" .. debug_output)
     print("Release build output:\n" .. release_output)
+
     require("oil").refresh()
 end, {})

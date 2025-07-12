@@ -1,5 +1,4 @@
 -- NEAR FUTURE
 -- Recolor the living shit out of the color sheme nappingfox.lua
--- create .vim dir put the (format files there)
 -- NOT SO IMPORTANT
 -- Add support for kotlin (lsp,linter and dap)

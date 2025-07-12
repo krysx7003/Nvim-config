@@ -1,4 +1,5 @@
 vim.api.nvim_create_user_command("VenvCreate", function()
     vim.fn.system({ "mkdir", "venv" })
     vim.fn.system({ "python3", "-m", "venv", "venv" })
+    vim.fn.system({ "mv", vim.fn.expand("~/.config/nvim/.nvim/pyproject.toml"), vim.fn.expand("~/.nvim/") })
 end, {})

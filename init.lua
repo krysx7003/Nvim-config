@@ -2,6 +2,15 @@ require("config.lazy")
 require("config.remap")
 require("config.cpp")
 
+local cwd = vim.fn.getcwd()
+local nvim_dir = cwd .. "/.nvim"
+
+vim.fn.system({ "mv", ".nvim_timer_data.json", ".nvim/" })
+
+if vim.fn.isdirectory(nvim_dir) == 0 then
+    vim.fn.system({ "mkdir", ".nvim" })
+end
+
 vim.opt.tabstop = 4
 
 vim.opt.shiftwidth = 4
