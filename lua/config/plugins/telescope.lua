@@ -9,7 +9,10 @@ return {
 
             ------------------- REMAP --------------------------
             vim.keymap.set("n", "<leader>d", "<cmd>Telecope diagnostics<CR>", { desc = "Show diagnostics (Telescope)" })
-            vim.keymap.set("n", "<leader>df", vim.diagnostic.open_float, { desc = "Show diagnostic float" })
+            vim.keymap.set("n", "<leader>df", function()
+                vim.diagnostic.open_float()
+                vim.diagnostic.open_float()
+            end, { desc = "Show diagnostic float" })
 
             vim.keymap.set("n", "<leader>pf", builtin.find_files, { desc = "Telescope find files" })
             vim.keymap.set("n", "<C-p>", builtin.git_files, { desc = "Telescope find git files" })
