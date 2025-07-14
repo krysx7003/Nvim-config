@@ -1,6 +1,7 @@
 require("config.lazy")
 require("config.remap")
 require("config.cpp")
+require("config.python")
 
 local cwd = vim.fn.getcwd()
 local nvim_dir = cwd .. "/.nvim"

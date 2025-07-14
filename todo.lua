@@ -1,4 +1,12 @@
 -- NEAR FUTURE
 -- Recolor the living shit out of the color sheme nappingfox.lua
+-- Set default man reader to nvim
+-- Move beetwen vim windows using C-J etc
+-- Move in tmux <leader>-[ mode using vim motions
+-- Recolor the <leader>-[ indicator (thing with currline/maxlines)
+-- Switch colors when switching tmux modes
+-- Copy from nvim console using vim motions
+-- Try to setup sessionizer(for tmux)
+-- Or try to setup resurect(for tmux)
 -- NOT SO IMPORTANT
 -- Add support for kotlin (lsp,linter and dap)
