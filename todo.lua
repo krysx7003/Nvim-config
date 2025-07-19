@@ -1,11 +1,12 @@
 -- NEAR FUTURE
--- Copy from nvim console using vim motions
 -- Set default man reader to nvim
--- Move in tmux <leader>-[ mode using vim motions
--- Recolor the <leader>-[ indicator (thing with currline/maxlines)
 -- Switch colors when switching tmux modes
--- Try to setup sessionizer(for tmux)
--- Or try to setup resurect(for tmux)
+-- When opened file is not dir do not create .nvim etc
+-- Move timer to chronos
+-- React to detaching tmux session
+-- Catch no file before it throws
+-- Log spam in chronos
+-- Log spam in javelin
 -- NOT SO IMPORTANT
 -- Add support for kotlin (lsp,linter and dap)
 -- Recolor the living shit out of the color sheme nappingfox.lua

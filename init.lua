@@ -6,9 +6,11 @@ require("config.python")
 local cwd = vim.fn.getcwd()
 local nvim_dir = cwd .. "/.nvim"
 
+
 vim.fn.system({ "mv", ".nvim_timer_data.json", ".nvim/" })
 
 if vim.fn.isdirectory(nvim_dir) == 0 then
+    local result = vim.api.nvim_exec2("args", { output = true })
     vim.fn.system({ "mkdir", ".nvim" })
 end
 
