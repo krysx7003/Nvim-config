@@ -5,13 +5,10 @@ require("config.python")
 
 local cwd = vim.fn.getcwd()
 local nvim_dir = cwd .. "/.nvim"
-
-
-vim.fn.system({ "mv", ".nvim_timer_data.json", ".nvim/" })
+local result = vim.api.nvim_exec2("args", { output = true })
 
 if vim.fn.isdirectory(nvim_dir) == 0 then
-    local result = vim.api.nvim_exec2("args", { output = true })
-    vim.fn.system({ "mkdir", ".nvim" })
+	vim.fn.system({ "mkdir", ".nvim" })
 end
 
 vim.opt.tabstop = 4
@@ -29,11 +26,11 @@ vim.opt.signcolumn = "yes"
 vim.opt.clipboard = "unnamedplus"
 
 vim.api.nvim_create_autocmd("LspAttach", {
-    callback = function(args)
-        local bufnr = args.buf
-        local client = vim.lsp.get_client_by_id(args.data.client_id)
-        if client and client.server_capabilities.semanticTokensProvider then
-            vim.lsp.semantic_tokens.start(bufnr, client.id)
-        end
-    end,
+	callback = function(args)
+		local bufnr = args.buf
+		local client = vim.lsp.get_client_by_id(args.data.client_id)
+		if client and client.server_capabilities.semanticTokensProvider then
+			vim.lsp.semantic_tokens.start(bufnr, client.id)
+		end
+	end,
 })
