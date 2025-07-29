@@ -1,8 +1,6 @@
 -- NEAR FUTURE
--- Set default man reader to nvim
 -- Switch colors when switching tmux modes
--- React to detaching tmux session
--- Log spam in javelin
+-- Fix tumx highlight
 -- NOT SO IMPORTANT
 -- Add support for kotlin (lsp,linter and dap)
 -- Recolor the living shit out of the color sheme nappingfox.lua
