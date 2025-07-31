@@ -1,6 +1,5 @@
 -- NEAR FUTURE
 -- Switch colors when switching tmux modes
--- Fix tumx highlight
 -- NOT SO IMPORTANT
 -- Add support for kotlin (lsp,linter and dap)
 -- Recolor the living shit out of the color sheme nappingfox.lua

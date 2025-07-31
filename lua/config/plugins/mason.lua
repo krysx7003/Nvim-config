@@ -16,17 +16,14 @@ return {
 
 		require("mason-tool-installer").setup({
 			ensure_installed = {
-				"debugpy",
-				"flake8",
-				"isort",
-				"mypy",
-				"pylint",
 				"lua-language-server",
+				"debugpy",
+				"basedpyright",
+				"ruff",
 				"codelldb",
 				"clangd",
 				"clang-format",
-				"basedpyright",
-				"ruff",
+				-- cpp linter
 			},
 		})
 	end,

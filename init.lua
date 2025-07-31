@@ -1,6 +1,7 @@
 require("config.lazy")
 require("config.remap")
 require("config.cpp")
+require("config.kotlin")
 require("config.python")
 
 local cwd = vim.fn.getcwd()
@@ -8,6 +9,7 @@ local nvim_dir = cwd .. "/.nvim"
 local result = vim.api.nvim_exec2("args", { output = true })
 
 if vim.fn.isdirectory(nvim_dir) == 0 then
+	vim.fn.system({ "cp", vim.fn.expand("~/.config/nvim/.nvim/.gitignore"), cwd })
 	vim.fn.system({ "mkdir", ".nvim" })
 end
 
