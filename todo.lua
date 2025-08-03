@@ -1,6 +1,14 @@
 -- NEAR FUTURE
+-- When in tex only launch the main.pdf
+-- When entering sub file go to matching section
+-- When opening file do not create .nvim
+-- Add logging to javelin
+-- Add error handling to javelin
+-- Move htmls to separate files
+-- Add logging to chronos
+-- Kotlin build (lint -> fix -> format -> build)
+-- Kotlin run and build-run (lint -> fix -> format -> build -> run)
+-- Kotlin debug  and build-debug
 -- Switch colors when switching tmux modes
--- Upgrade kotlin support
--- Fix vimtex
 -- NOT SO IMPORTANT
 -- Recolor the living shit out of the color sheme nappingfox.lua
